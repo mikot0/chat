@@ -1,0 +1,25 @@
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+</head>
+
+<body>
+    <div id="card">
+        裙下聊天
+        <input class="editor" type="text" id="nickname" placeholder="网名*" maxlength="6">
+        <input class="editor" type="password" id="password" placeholder="裙底密钥*">
+        <button class="btn" id="login">掀裙子*</button>
+    </div>
+
+    <div id="card2" hidden>
+        欢迎入裙
+        <div id="chat" data-placeholder="how lucky to meet you!"></div>
+        <div class="toolbar">
+            <button style="width: auto;" class="btn" id="insertimage">插入图片<666kb</button>
+            <button style="width: auto;" class="btn" id="sendmessage">发送消息*</button>
+        </div>
+        <div style="width: auto;" id="message" class="editor" contenteditable="true" data-placeholder="填写文本内容*"></div>
+        <input type="file" id="imageupload" accept="image/*" hidden>
+    </div>
+</body>

@@ -1,0 +1,79 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url(1.jpg) fixed 0% 0% / cover;
+}
+
+body > * {
+    margin: 10;
+}
+
+body, .editor, .editor::placeholder, .btn {
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+#card, #card2 {
+    background-color: #ffffff4d;
+    box-shadow: 5px 5px 7px #8c959f77, -5px -5px 7px #fffffff7;
+}
+
+#card {
+    position: absolute;
+}
+
+#card2 {
+    width: 66%;
+}
+
+.editor {
+    padding: 10;
+    border: 1px solid;
+    background-color: #fff3;
+    backdrop-filter: blur(5px);
+    outline: none;
+}
+
+.editor::-webkit-scrollbar {
+    display: none;
+}
+
+.btn {
+    padding: 8;
+    border: 1px solid;
+    background-color: transparent;
+}
+
+.toolbar {
+    padding: 6 0;
+}
+
+#chat {
+    height: 66vh;
+    overflow-y: auto;
+    word-wrap: break-word;
+}
+
+#chat:empty::before, .editor:empty::before {
+    content: attr(data-placeholder);
+}
+
+@media only screen and (max-width: 1024px) {
+    body, #chat, .btn, .editor {
+        font-size: 66;
+    }
+
+    #card2 {
+        width: 100%;
+    }
+
+    .btn, .editor {
+        width: 100%;
+        margin: 6 0;
+    }
+}
